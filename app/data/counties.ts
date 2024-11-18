@@ -287,7 +287,6 @@ export type CountyData = {
 export const getCountyData = (countySlug: string): CountyData => {
     const county = romanianCounties[countySlug];
     const countyData = candidatesByCountyAndParty[countySlug];
-    console.log({countyData})
     const parties = Object.entries(countyData).map(([partySlug, party]) => {
         const partyInfo = getPartyInfo(party.partyName);
         return {

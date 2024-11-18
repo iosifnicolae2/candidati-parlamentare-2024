@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { CountySearch } from "./components/county-search";
 import { CountyGrid } from "./components/county-grid";
-import { LatestUpdates } from "./components/latest-updates";
-import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { ro } from "./i18n/ro";
 import Link from "next/link";
