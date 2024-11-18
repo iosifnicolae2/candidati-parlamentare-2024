@@ -24,7 +24,14 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body className={inter.className}>{children}</body>
-      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cbe99b37485a4405bc0c7b1455e99114"}'></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LQKJCH2MR"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5LQKJCH2MR');
+      </script>
     </html>
   );
 }
