@@ -14,13 +14,13 @@ export const ro = {
   },
   meta: {
     title: "Candidați Parlamentare 2024",
-    description: "Explorează candidații la alegerile parlamentare din România pe județe",
+    description: "Care sunt candidații la alegerile parlamentare din România in județul tau?",
   },
   home: {
     title: "Candidați Parlamentare 2024",
-    subtitle: "Explorează candidații la alegerile parlamentare din România",
+    subtitle: "Care sunt candidații la alegerile parlamentare din România?",
     popularCounties: "Județe populare",
     latestUpdates: "Ultimele actualizări",
-    exploreButton: "Explorează candidații",
+    exploreButton: "Vezi candidații",
   }
 };
