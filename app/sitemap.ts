@@ -2,6 +2,7 @@ import type {MetadataRoute} from 'next'
 import {generateStaticParams as countyGenerateStaticParams} from "./candidati/[county]/page";
 import {generateStaticParams as partiesGenerateStaticParams} from "./candidati/[county]/[party]/page";
 
+export const runtime = 'edge';
 
 const ROOT_DOMAIN = "https://candidati-paralamentare-2024.pages.dev";
 

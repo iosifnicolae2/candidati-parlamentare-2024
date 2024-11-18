@@ -3,6 +3,8 @@ import { Breadcrumb } from "@/app/components/breadcrumb";
 import {candidatesByCountyAndParty, generateCountrySlug, getCountyData, romanianCounties} from "@/app/data/counties";
 import { notFound } from "next/navigation";
 
+export const runtime = 'edge';
+
 // Generate static params for all counties
 export function generateStaticParams() {
     // generate county and party params
