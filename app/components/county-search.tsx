@@ -16,10 +16,10 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { romanianCounties } from "../data/counties";
+import {romanianCounties} from "../data/counties";
 
 interface CountySearchProps {
-  onCountySelect: (county: string) => void;
+  onCountySelect: (countySlug: string) => void;
 }
 
 export function CountySearch({ onCountySelect }: CountySearchProps) {
@@ -33,40 +33,38 @@ export function CountySearch({ onCountySelect }: CountySearchProps) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[300px] justify-between"
+          className="w-[300px] justify-between rounded-md"
         >
           {value
-            ? romanianCounties.find(
-                (county) => county.toLowerCase() === value.toLowerCase()
-              )
-            : "Select county..."}
+            ? romanianCounties[value].name
+            : "Caută după numele județului..."}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[300px] p-0">
         <Command>
-          <CommandInput placeholder="Search county..." />
-          <CommandEmpty>No county found.</CommandEmpty>
+          <CommandInput placeholder="Caută după numele județului..." />
+          <CommandEmpty>Județul nu a fost găsit.</CommandEmpty>
           <CommandGroup>
-            {romanianCounties.map((county) => (
+            {Object.entries(romanianCounties).map(([countySlug, county]) => (
               <CommandItem
-                key={county}
-                value={county}
+                key={countySlug}
+                value={countySlug}
                 onSelect={(currentValue) => {
                   setValue(currentValue);
-                  onCountySelect(county);
+                  onCountySelect(currentValue);
                   setOpen(false);
                 }}
               >
                 <Check
                   className={cn(
                     "mr-2 h-4 w-4",
-                    value.toLowerCase() === county.toLowerCase()
+                    value.toLowerCase() === countySlug.toLowerCase()
                       ? "opacity-100"
                       : "opacity-0"
                   )}
                 />
-                {county}
+                {county.name}
               </CommandItem>
             ))}
           </CommandGroup>

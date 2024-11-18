@@ -25,14 +25,14 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
             {ro.home.title}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            {ro.home.subtitle}
-          </p>
+          {/*<p className="text-xl text-gray-600 dark:text-gray-300 mb-8">*/}
+          {/*  {ro.home.subtitle}*/}
+          {/*</p>*/}
 
-          <div className="flex items-center justify-center gap-2 mb-8">
-            <MapPin className="h-5 w-5 text-gray-500" />
-            <CountySearch onCountySelect={(county) => {
-              window.location.href = `/judet/${county.toLowerCase()}`;
+          <div className="flex items-center justify-center gap-2 mt-8 mb-8">
+            {/*<MapPin className="h-5 w-5 text-gray-500" />*/}
+            <CountySearch onCountySelect={(countySlug) => {
+              window.location.href = `candidati/${countySlug}`;
             }} />
           </div>
 
@@ -40,7 +40,7 @@ export default function Home() {
             {popularCounties.map((county) => (
               <Link
                 key={county}
-                href={`/judet/${county.toLowerCase()}`}
+                href={`/candidati/${county.toLowerCase()}`}
                 className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-100 text-sm hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
               >
                 {county}
@@ -49,13 +49,17 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-semibold mb-6">{ro.home.popularCounties}</h2>
-            <CountyGrid />
-          </div>
+        <div className="mx-auto sm:w-3/4">
+          {/*<div className="md:col-span-2">*/}
+          {/*  <h2 className="text-2xl font-semibold mb-6">{ro.home.popularCounties}</h2>*/}
+          {/*  <CountyGrid />*/}
+          {/*</div>*/}
+          {/*<div>*/}
+          {/*  <LatestUpdates />*/}
+          {/*</div>*/}
           <div>
-            <LatestUpdates />
+            {/*<h2 className="text-2xl font-semibold mb-6">{ro.home.popularCounties}</h2>*/}
+            <CountyGrid/>
           </div>
         </div>
       </div>
