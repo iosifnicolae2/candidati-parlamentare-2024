@@ -2,6 +2,7 @@ import {PartyCandidatesDisplay, VotesDisplay} from "@/app/components/votes-displ
 import { Breadcrumb } from "@/app/components/breadcrumb";
 import {generateCountrySlug, getCountyData, romanianCounties} from "@/app/data/counties";
 import { notFound } from "next/navigation";
+import {Footer} from "../../components/footer";
 
 export const runtime = 'edge';
 
@@ -35,6 +36,7 @@ export default async function CountyPage({params}: any) {
             />
             <div className="flex flex-col items-center justify-center">
                 <VotesDisplay data={countyData}/>
+                <Footer/>
             </div>
         </div>
     );

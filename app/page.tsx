@@ -6,6 +6,7 @@ import { CountyGrid } from "./components/county-grid";
 import { motion } from "framer-motion";
 import { ro } from "./i18n/ro";
 import Link from "next/link";
+import {Footer} from "./components/footer";
 
 export default function Home() {
   const [searchFocused, setSearchFocused] = useState(false);
@@ -59,6 +60,7 @@ export default function Home() {
             {/*<h2 className="text-2xl font-semibold mb-6">{ro.home.popularCounties}</h2>*/}
             <CountyGrid/>
           </div>
+          <Footer/>
         </div>
       </div>
     </main>
