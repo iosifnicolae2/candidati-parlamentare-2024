@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://candidati-parlamentare-2024.pages.dev/sitemap.xml
