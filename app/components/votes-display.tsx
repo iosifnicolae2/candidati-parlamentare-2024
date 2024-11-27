@@ -35,7 +35,7 @@ export function CandidateTable({party, candidates}: CandidateTableProps) {
                     <TableRow key={`${candidate.name}-${candidate.position}`}>
                         <TableCell className="font-medium">{candidate.position}</TableCell>
                         <TableCell>
-                            <Link href={`https://www.youtube.com/results?search_query=${candidate.name} - ${party.name}`} target="_blank" rel="noreferrer"
+                            <Link href={`https://www.youtube.com/results?sp=CAI%253D&search_query=${candidate.name} - ${party.name}`} target="_blank" rel="noreferrer"
                                   className={'font-medium text-blue-600 dark:text-blue-500 hover:underline'}>
                                 {candidate.name}
                             </Link>
