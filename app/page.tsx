@@ -1,6 +1,4 @@
 "use client";
-
-import { useState } from "react";
 import { CountySearch } from "./components/county-search";
 import { CountyGrid } from "./components/county-grid";
 import { motion } from "framer-motion";
@@ -9,8 +7,6 @@ import Link from "next/link";
 import {Footer} from "./components/footer";
 
 export default function Home() {
-  const [searchFocused, setSearchFocused] = useState(false);
-
   const popularCounties = ["București", "Cluj", "Iași", "Timiș", "Constanța"];
 
   return (
