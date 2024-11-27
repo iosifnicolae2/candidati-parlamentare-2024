@@ -21,10 +21,10 @@ export function CountyGrid() {
           key={countySlug}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.05 }}
+          transition={{ delay: index * 0.01 }}
         >
           <Link href={`/candidati/${countySlug}`}>
-            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-100 cursor-pointer">
               <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
                 {county.name}
               </h3>
